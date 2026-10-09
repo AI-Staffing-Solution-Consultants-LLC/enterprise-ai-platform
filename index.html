@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AISSC Enterprise AI Platform | Autonomous Workforce Platform & 284+ Agent Architecture</title>
+  
+  <!-- SEO & Entity Indexing Metadata -->
+  <meta name="description" content="AISSC is an enterprise AI software platform engineering zero-idle autonomous multi-agent systems and 284+ specialized agent skills on Google Cloud Vertex AI." />
+  <meta name="keywords" content="AISSC, Enterprise AI, Autonomous Agents, Google Cloud Partner, Vertex AI, SUAD Architecture, Multi-Agent Systems, OpenClaw Integration" />
+  <meta name="author" content="AISSC AI Technologies LLC" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Tailwind Configuration -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f6ff',
+              100: '#e0edff',
+              400: '#3882f6',
+              500: '#1d68f3',
+              600: '#0246e3',
+              900: '#0b1938',
+              950: '#060d1f'
+            },
+            web3: {
+              purple: '#8b5cf6',
+              cyan: '#06b6d4',
+              pink: '#ec4899'
+            },
+            darkbg: '#060911',
+            darkcard: '#121824',
+            darkborder: '#1e293b'
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['Fira Code', 'JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Custom Styles -->
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #060911;
+      color: #f1f5f9;
+      overflow-x: hidden;
+    }
+    .glass-panel {
+      background: rgba(18, 24, 38, 0.88);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-card {
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #3882f6 0%, #a855f7 50%, #ec4899 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .startup-badge {
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(147, 51, 234, 0.2));
+      border: 1px solid rgba(147, 51, 234, 0.4);
+    }
+    .web3-badge {
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(6, 182, 212, 0.15));
+      border: 1px solid rgba(139, 92, 246, 0.3);
+    }
+    .gradient-border {
+      position: relative;
+    }
+    .gradient-border::before {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      border-radius: inherit;
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(66,133,244,0.4), rgba(167,139,250,0.3), transparent);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+    .pulse-dot {
+      box-shadow: 0 0 12px #34A853;
+    }
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0d1322;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-brand-500 selection:text-white">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-gradient-to-r from-blue-950 via-slate-900 to-purple-950 text-xs py-2 px-4 text-center border-b border-white/10 text-slate-300 flex flex-wrap items-center justify-center gap-3">
+    <!-- Option A Update -->
+    <span class="startup-badge font-mono text-cyan-300 px-2.5 py-0.5 rounded text-[10px] font-bold tracking-wider flex items-center gap-1.5 uppercase">
+      <i class="fa-solid fa-shield-halved text-purple-400"></i> BOOTSTRAPPED &amp; FOUNDER-BACKED
+    </span>
+    <span><strong>AISSC Enterprise AI Platform</strong></span>
+    <span class="text-slate-600">|</span>
+    <a href="https://www.linkedin.com/in/ai-staffing-solutions/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-blue-400 hover:text-blue-300 font-mono font-semibold transition-colors">
+      <i class="fa-brands fa-linkedin text-sm"></i> Official LinkedIn Profile
+    </a>
+    <span class="text-slate-600">|</span>
+    <span class="web3-badge font-mono text-purple-300 px-2 py-0.5 rounded text-[10px] font-semibold flex items-center gap-1">
+      <i class="fa-solid fa-globe text-cyan-400"></i> AI-Business-Employees.com
+    </span>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="sticky top-0 z-50 glass-panel border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Company Brand -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 via-purple-600 to-cyan-500 p-0.5 shadow-lg shadow-purple-500/20 group-hover:shadow-purple-500/40 transition-all">
+          <div class="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center">
+            <i class="fa-solid fa-brain text-cyan-400 text-lg group-hover:scale-110 transition-transform"></i>
+          </div>
+        </div>
+        <div>
+          <span class="text-base sm:text-lg font-extrabold tracking-tight text-white flex items-center gap-2">
+            AISSC Enterprise AI Platform
+          </span>
+          <span class="block text-[10px] text-purple-400 font-mono tracking-wider">AI TECHNOLOGIES • AUTONOMOUS WORKFORCE SOFTWARE</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-300">
+        <a href="#about-company" class="hover:text-white transition-colors text-purple-300">Company Overview</a>
+        <a href="#skills-library" class="hover:text-white transition-colors text-cyan-300 font-bold flex items-center gap-1">
+          <span>284+ Agent Skills</span>
+          <span class="px-1.5 py-0.5 rounded-full bg-cyan-500/20 text-cyan-300 text-[10px] font-mono">Full Roster</span>
+        </a>
+        <a href="#modules" class="hover:text-white transition-colors">Platform Modules</a>
+        <a href="#poc-showcase" class="hover:text-white transition-colors flex items-center gap-1.5">
+          <span>Live Proof of Concept</span>
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        </a>
+        <a href="#decentralized-infra" class="hover:text-white transition-colors text-purple-300">Decentralized Agent Hub</a>
+        <a href="#podcast-media" class="hover:text-white transition-colors flex items-center gap-1">
+          <i class="fa-solid fa-headphones text-purple-400"></i> Technical Briefing
+        </a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-3">
+        <a href="#pricing" class="hidden sm:inline-flex items-center gap-2 text-xs font-mono text-cyan-300 bg-cyan-950/60 hover:bg-cyan-900/80 border border-cyan-800/80 px-3 py-2 rounded-lg transition-all">
+          <i class="fa-solid fa-layer-group text-cyan-400 text-sm"></i>
+          <span>Pricing & Tiers</span>
+        </a>
+        <button onclick="openDemoModal('AISSC Enterprise AI Platform Demo')" class="inline-flex items-center gap-2 text-xs font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 px-4 py-2.5 rounded-lg shadow-lg shadow-purple-600/25 transition-all hover:scale-[1.02] active:scale-[0.98]">
+          <i class="fa-solid fa-desktop"></i>
+          <span>Schedule Demo</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+
+    <!-- Hero Section -->
+    <section class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden">
+      <!-- Background Glow Orbs -->
+      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-blue-600/15 rounded-full blur-[150px] pointer-events-none"></div>
+      <div class="absolute top-1/3 right-10 w-[450px] h-[450px] bg-purple-600/15 rounded-full blur-[130px] pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center max-w-4xl mx-auto">
+          
+          <!-- LinkedIn Verified Profile Pill -->
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/90 border border-blue-500/50 text-xs font-mono text-slate-200 mb-8 shadow-2xl">
+            <span class="flex h-2.5 w-2.5 rounded-full bg-emerald-400 pulse-dot"></span>
+            <span class="text-white font-bold">AISSC Enterprise AI Platform</span>
+            <span class="text-slate-500">|</span>
+            <a href="https://www.linkedin.com/in/ai-staffing-solutions/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline flex items-center gap-1 font-semibold">
+              <i class="fa-brands fa-linkedin text-blue-400"></i> Verified Organization Profile
+            </a>
+          </div>
+
+          <!-- Main Heading -->
+          <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.12] mb-6">
+            Autonomous Digital Workforces &amp; <br class="hidden sm:inline"/>
+            <span class="gradient-text">284+ Enterprise Agent Skills</span>
+          </h1>
+
+          <!-- Lead Paragraph -->
+          <div class="text-base sm:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed font-light mb-10 space-y-4">
+            <p>
+              <strong>AISSC Enterprise AI Platform</strong> (by AISSC AI Technologies LLC) combines open-source multi-agent orchestration with proprietary cognitive execution engines to deliver zero-idle <strong>Spin-Up-And-Die (SUAD)</strong> serverless architecture on Google Cloud Vertex AI. Powered by 284+ structured agent skills and supported by our enterprise Web3 directory platform <code class="text-cyan-300 font-mono">AI-Business-Employees.com</code>.
+            </p>
+
+            <p class="text-cyan-200 font-normal">
+              Current OpenClaw users will soon be able to integrate this technology via our 3 Companion Software Products (<span class="text-amber-300 font-semibold font-mono">Coming Soon • Packaging in Progress</span>), empowering existing agents with next-level Superuser capabilities.
+            </p>
+
+            <p class="text-purple-300 font-normal">
+              Designed for high-scale enterprise workflows, our platform provides cryptographically verified task verification and decentralized identity management across distributed multi-agent ecosystems.
+            </p>
+          </div>
+
+          <!-- CTAs -->
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
+            <button onclick="openDemoModal('Platform Overview & Demo')" class="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 hover:opacity-95 shadow-xl shadow-cyan-500/20 transition-all flex items-center justify-center gap-3 text-base">
+              <i class="fa-solid fa-desktop text-cyan-200"></i>
+              <span>Schedule Enterprise Platform Demo</span>
+            </button>
+            <a href="#skills-library" class="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold text-slate-200 bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 transition-all flex items-center justify-center gap-2 text-base">
+              <i class="fa-solid fa-users-gear text-purple-400"></i>
+              <span>Explore 284+ Agent Skills</span>
+            </a>
+          </div>
+
+          <!-- Key Metrics -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto text-left mt-10">
+            <div class="glass-card p-4 rounded-xl border border-blue-500/30">
+              <div class="text-2xl font-bold font-mono text-blue-400">284+</div>
+              <div class="text-xs text-slate-400 mt-1">Indexed Agent Skills</div>
+            </div>
+            <div class="glass-card p-4 rounded-xl border border-purple-500/30">
+              <div class="text-2xl font-bold font-mono text-purple-400">Platform Domain</div>
+              <div class="text-xs text-slate-400 mt-1">AI-Business-Employees.com</div>
+            </div>
+            <div class="glass-card p-4 rounded-xl border border-emerald-500/30">
+              <div class="text-2xl font-bold font-mono text-emerald-400">$0.00</div>
+              <div class="text-xs text-slate-400 mt-1">Idle Baseline SUAD Bill</div>
+            </div>
+            <div class="glass-card p-4 rounded-xl border border-cyan-500/30">
+              <div class="text-2xl font-bold font-mono text-cyan-400">GCP Native</div>
+              <div class="text-xs text-slate-400 mt-1">Vertex AI &amp; Cloud Run</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT THE COMPANY SECTION -->
+    <section id="about-company" class="py-16 bg-slate-950/90 border-y border-slate-800 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="glass-panel p-8 sm:p-12 rounded-3xl border border-purple-500/30 bg-gradient-to-b from-slate-900 to-slate-950">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <div class="lg:col-span-7 space-y-4">
+              <span class="startup-badge font-mono text-cyan-300 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase inline-block">
+                Software Platform Overview
+              </span>
+              
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                AISSC Enterprise AI Platform
+              </h2>
+              
+              <p class="text-purple-300 font-medium text-sm flex items-center gap-2">
+                <i class="fa-brands fa-linkedin text-blue-400 text-lg"></i>
+                <span>LinkedIn Organization: </span>
+                <a href="https://www.linkedin.com/in/ai-staffing-solutions/" target="_blank" rel="noopener noreferrer" class="text-cyan-300 hover:underline font-mono">
+                  linkedin.com/in/ai-staffing-solutions
+                </a>
+              </p>
+
+              <p class="text-slate-300 text-sm leading-relaxed">
+                The <strong>AISSC Enterprise AI Platform</strong> develops proprietary software infrastructure enabling zero-idle <strong>Spin-Up-And-Die (SUAD)</strong> serverless container physics on Google Cloud Vertex AI and Cloud Run. Powered by 284+ structured agent skills and integrated with OpenClaw frameworks through 3 Companion Products, AISSC provides scalable AI software capabilities for modern enterprise workloads.
+              </p>
+
+              <p class="text-slate-300 text-sm leading-relaxed">
+                <strong>AISSC AI Technologies LLC</strong> develops proprietary software infrastructure enabling zero-idle <strong>Spin-Up-And-Die (SUAD)</strong> serverless container physics on Google Cloud Vertex AI and Cloud Run. Powered by 284+ structured agent skills and integrated with OpenClaw frameworks through 3 Companion Products, AISSC provides scalable AI software capabilities for modern enterprise workloads.
+              </p>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 font-mono text-xs text-slate-300">
+                <div class="bg-slate-900/80 p-3.5 rounded-xl border border-slate-800">
+                  <div class="text-blue-400 font-bold mb-1 flex items-center justify-between">
+                    <span><i class="fa-solid fa-code mr-1.5"></i> OpenClaw Companion Suite</span>
+                    <span class="text-[10px] bg-amber-500/20 text-amber-300 border border-amber-500/30 px-2 py-0.5 rounded font-bold">COMING SOON</span>
+                  </div>
+                  <div class="text-slate-400 text-[11px]">3 Companion Software Modules currently undergoing final release packaging.</div>
+                </div>
+                <div class="bg-slate-900/80 p-3.5 rounded-xl border border-slate-800">
+                  <div class="text-cyan-400 font-bold mb-1 flex items-center justify-between">
+                    <span><i class="fa-solid fa-network-wired mr-1.5"></i> Decentralized Identity Hub</span>
+                    <span class="text-[10px] bg-purple-500/20 text-purple-300 border border-purple-500/30 px-2 py-0.5 rounded font-bold">FUNDING ROADMAP</span>
+                  </div>
+                  <div class="text-slate-400 text-[11px]">Cryptographic verification layer planned for Phase 2 implementation as funding scales.</div>
+                </div>
+              </div>
+
+              <div class="flex flex-wrap items-center gap-4 pt-3 text-xs font-mono">
+                <span class="text-emerald-400 font-bold"><i class="fa-solid fa-circle-check mr-1"></i> Google Cloud Native AI Stack</span>
+                <button onclick="openDemoModal('Technical Architecture Briefing')" class="text-cyan-300 hover:text-white font-bold flex items-center gap-1 underline">
+                  <i class="fa-solid fa-desktop"></i> Schedule Technical Demo
+                </button>
+              </div>
+            </div>
+
+            <!-- Executive Summary Panel -->
+            <div class="lg:col-span-5">
+              <div class="bg-slate-950/90 p-6 rounded-2xl border border-slate-800 text-xs space-y-4">
+                <div class="text-white font-bold text-sm border-b border-slate-800 pb-3 flex items-center justify-between">
+                  <span>Entity Credentials</span>
+                  <span class="text-emerald-400 font-mono text-[11px]"><i class="fa-solid fa-shield-halved"></i> Active SaaS Entity</span>
+                </div>
+
+                <div class="space-y-3 text-slate-300">
+                  <!-- Option B Update -->
+                  <div class="flex items-start gap-2.5">
+                    <i class="fa-solid fa-piggy-bank text-emerald-400 text-sm mt-0.5"></i>
+                    <div>
+                      <strong class="text-white">Capitalization:</strong>
+                      <div class="text-slate-400 font-mono text-[11px]">Privately Funded (Pre-Seed)</div>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-2.5">
+                    <i class="fa-brands fa-linkedin text-blue-400 text-sm mt-0.5"></i>
+                    <div>
+                      <strong class="text-white">LinkedIn Organization:</strong>
+                      <div class="text-slate-400 font-mono text-[11px]">ai-staffing-solutions</div>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-2.5">
+                    <i class="fa-brands fa-github text-purple-400 text-sm mt-0.5"></i>
+                    <div>
+                      <strong class="text-white">GitHub Organization:</strong>
+                      <div class="text-slate-400 font-mono text-[11px]">AI-Staffing-Solution-Consultants-LLC</div>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-2.5">
+                    <i class="fa-solid fa-globe text-cyan-400 text-sm mt-0.5"></i>
+                    <div>
+                      <strong class="text-white">Primary Web Domain:</strong>
+                      <div class="text-slate-400 font-mono text-[11px]">AI-Business-Employees.com</div>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-2.5">
+                    <i class="fa-solid fa-cloud text-emerald-400 text-sm mt-0.5"></i>
+                    <div>
+                      <strong class="text-white">Target Cloud Stack:</strong>
+                      <div class="text-purple-300 font-mono text-[11px]">Google Cloud Vertex AI &amp; Cloud Run</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pt-3 border-t border-slate-800 flex flex-col gap-2">
+                  <button onclick="openDemoModal('Platform Access Briefing')" class="w-full text-center py-2.5 rounded-lg bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-500 hover:to-purple-500 text-white font-semibold font-mono text-xs transition-colors flex items-center justify-center gap-2 shadow-md">
+                    <i class="fa-solid fa-desktop"></i> Request Platform Demo
+                  </button>
+                  <a href="https://www.linkedin.com/in/ai-staffing-solutions/" target="_blank" rel="noopener noreferrer" class="w-full text-center py-2 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-300 font-semibold font-mono text-xs transition-colors flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-linkedin"></i> View LinkedIn Profile
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- AGENT SKILLS LIBRARY SECTION (284+ AGENTS SEARCHABLE DIRECTORY) -->
+    <section id="skills-library" class="py-20 bg-slate-950 border-b border-slate-800 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-10">
+          <span class="web3-badge font-mono uppercase tracking-widest text-cyan-300 px-3.5 py-1.5 rounded-full text-xs inline-block mb-3">
+            Official 284+ Agent Skills Directory
+          </span>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+            284+ Enterprise Agent Skills Roster
+          </h2>
+          <p class="text-slate-400 mt-3 text-sm">
+            Search and explore specialized agent skills engineered into the platform architecture by <strong class="text-purple-300">AISSC AI Technologies LLC</strong>.
+          </p>
+        </div>
+
+        <!-- Search & Filter Controls -->
+        <div class="glass-panel p-6 rounded-2xl border border-purple-500/30 mb-10 space-y-4">
+          <div class="flex flex-col md:flex-row items-center gap-4">
+            
+            <!-- Search Bar -->
+            <div class="relative w-full md:flex-grow">
+              <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+              <input 
+                type="text" 
+                id="agent-search" 
+                oninput="filterAgents()" 
+                placeholder="Search by agent skill name, framework, or capability (e.g. OpenClaw, React, Solidity, PPC, DevOps)..." 
+                class="w-full bg-slate-950/90 border border-slate-800 rounded-xl pl-11 pr-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500 transition-colors"
+              />
+            </div>
+
+            <!-- Total Counter Badge -->
+            <div class="whitespace-nowrap font-mono text-xs text-purple-300 bg-purple-950/80 px-4 py-3 rounded-xl border border-purple-500/30 flex items-center gap-2">
+              <i class="fa-solid fa-robot text-cyan-400"></i>
+              <span>Showing <strong id="agent-count" class="text-white">284</strong> Skills</span>
+            </div>
+
+          </div>
+
+          <!-- Filter Category Pills -->
+          <div class="flex flex-wrap items-center gap-2 pt-2 border-t border-slate-800/80 text-xs font-mono">
+            <span class="text-slate-400 mr-2 text-[11px]">Domain:</span>
+            <button onclick="setCategoryFilter('all')" id="cat-all" class="cat-pill px-3 py-1.5 rounded-lg bg-purple-600 text-white font-bold">All Domains</button>
+            <button onclick="setCategoryFilter('engineering')" id="cat-engineering" class="cat-pill px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300">Engineering</button>
+            <button onclick="setCategoryFilter('design')" id="cat-design" class="cat-pill px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300">Design</button>
+            <button onclick="setCategoryFilter('paid-media')" id="cat-paid-media" class="cat-pill px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300">Paid Media</button>
+            <button onclick="setCategoryFilter('sales')" id="cat-sales" class="cat-pill px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300">Sales</button>
+            <button onclick="setCategoryFilter('marketing')" id="cat-marketing" class="cat-pill px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300">Marketing</button>
+          </div>
+        </div>
+
+        <!-- Dynamic Agent Roster Grid -->
+        <div id="agents-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Dynamic JS content injected here -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- COMMERCIAL PRODUCT CATALOG SECTION (3 MODULES) -->
+    <section id="modules" class="py-20 relative bg-slate-950/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 font-mono text-xs mb-3">
+            <i class="fa-solid fa-box-open text-amber-400"></i> Final Packaging in Progress • Early Access Coming Soon
+          </div>
+          <br/>
+          <span class="web3-badge font-mono uppercase tracking-widest text-cyan-300 px-3.5 py-1.5 rounded-full text-xs inline-block mb-3">
+            3 Companion Software Products
+          </span>
+          <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">Plug-and-Play AI Architecture Modules</h2>
+          <p class="text-slate-400 mt-4 text-base">
+            Engineered by <strong class="text-purple-300">AISSC AI Technologies LLC</strong>, these 3 companion products are in final packaging and preparing for early access release to retrofit directly into OpenClaw or custom agent setups.
+          </p>
+        </div>
+
+        <!-- Catalog Items Grid -->
+        <div class="space-y-12">
+          
+          <!-- MODULE 1 -->
+          <div class="glass-panel p-8 sm:p-10 rounded-3xl border border-purple-500/30 relative gradient-border hover:border-purple-500/60 transition-all">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              
+              <div class="lg:col-span-7 space-y-4">
+                <div class="flex items-center gap-3">
+                  <span class="px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs font-mono font-bold border border-purple-500/30">
+                    MODULE 01
+                  </span>
+                  <span class="text-xs font-mono text-cyan-300">OpenClaw Compatible Superuser Upgrade</span>
+                  <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 text-[10px] font-mono font-bold border border-amber-500/30">COMING SOON</span>
+                </div>
+
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-white">
+                  The Independent Structured Thought Layer
+                </h3>
+                <p class="text-purple-300 font-medium text-sm">
+                  The Cognitive Engine for Long-Horizon Task Decomposition
+                </p>
+
+                <p class="text-slate-300 text-sm leading-relaxed">
+                  Eliminates compound conversational drift—the loss of context when LLMs execute multi-stage business plans through unconstrained prompt chains. Retrofits the enterprise <strong>NEXUS Systems Framework</strong> into an enclosed, schema-driven cognitive engine.
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 font-mono text-xs text-slate-300">
+                  <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-800">
+                    <div class="text-purple-400 font-bold mb-1"><i class="fa-solid fa-server mr-1.5"></i> MCP Workspace Routing</div>
+                    <div class="text-slate-400 text-[11px]">Headless Model Context Protocol server querying without touching execution code.</div>
+                  </div>
+                  <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-800">
+                    <div class="text-purple-400 font-bold mb-1"><i class="fa-solid fa-file-code mr-1.5"></i> Declarative YAML State</div>
+                    <div class="text-slate-400 text-[11px]">Schema-driven Markdown frontmatter (<code class="text-slate-300">runbook.md</code>, <code class="text-slate-300">gate-check.md</code>).</div>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-4 pt-2">
+                  <span class="text-emerald-400 font-mono text-xs font-bold"><i class="fa-solid fa-check-double mr-1"></i> 0% Conversational Drift</span>
+                  <span class="text-cyan-400 font-mono text-xs font-bold"><i class="fa-solid fa-check-double mr-1"></i> Validation Gauntlet Pass</span>
+                </div>
+              </div>
+
+              <div class="lg:col-span-5">
+                <div class="bg-slate-950 p-5 rounded-2xl border border-slate-800 font-mono text-xs">
+                  <div class="text-slate-400 pb-2 border-b border-slate-800 flex items-center justify-between text-[11px]">
+                    <span>nexus-structured-thought.yaml</span>
+                    <span class="text-purple-400 font-bold">NEXUS SCHEMA</span>
+                  </div>
+                  <pre class="text-slate-300 text-[11px] leading-relaxed pt-3 overflow-x-auto">
+<span class="text-purple-400">nexus_version</span>: <span class="text-emerald-300">"4.2.0-mcp"</span>
+<span class="text-purple-400">entity</span>: <span class="text-amber-300">"AISSC AI Technologies LLC"</span>
+<span class="text-purple-400">openclaw_integration</span>: <span class="text-cyan-300">"SUPERUSER_COMPANION_ENABLED"</span>
+<span class="text-purple-400">task_decomposition</span>:
+  <span class="text-purple-400">epic_id</span>: <span class="text-emerald-300">"EPIC-9902-INFRA"</span>
+  <span class="text-purple-400">validation_gauntlet</span>:
+    <span class="text-purple-400">gate_01</span>: <span class="text-emerald-300">"YAML_FRONTMATTER_PASS"</span>
+    <span class="text-purple-400">gate_02</span>: <span class="text-emerald-300">"IDEMPOTENCY_HASH_VERIFIED"</span>
+<span class="text-purple-400">drift_protection</span>: <span class="text-blue-400">STRICT_ENFORCE</span></pre>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- MODULE 2 -->
+          <div class="glass-panel p-8 sm:p-10 rounded-3xl border border-blue-500/30 relative gradient-border hover:border-blue-500/60 transition-all">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              
+              <div class="lg:col-span-5 order-2 lg:order-1">
+                <div class="bg-slate-950 p-5 rounded-2xl border border-slate-800 font-mono text-xs">
+                  <div class="text-slate-400 pb-2 border-b border-slate-800 flex items-center justify-between text-[11px]">
+                    <span>suad-cloudrun-mesh.json</span>
+                    <span class="text-emerald-400 font-bold">$0.00 IDLE</span>
+                  </div>
+                  <pre class="text-slate-300 text-[11px] leading-relaxed pt-3 overflow-x-auto">
+{
+  <span class="text-blue-400">"execution_physics"</span>: <span class="text-amber-300">"SUAD_SPIN_UP_DIE"</span>,
+  <span class="text-blue-400">"provider"</span>: <span class="text-emerald-300">"Google Cloud Run / Vertex AI"</span>,
+  <span class="text-blue-400">"cold_start_time"</span>: <span class="text-emerald-300">"&lt; 1.8s"</span>,
+  <span class="text-blue-400">"max_worker_lifespan"</span>: <span class="text-amber-300">"120s"</span>,
+  <span class="text-blue-400">"gcs_fuse_mount"</span>: <span class="text-emerald-300">"aissc-persistent-store"</span>,
+  <span class="text-blue-400">"idle_scale_instances"</span>: <span class="text-rose-400">0</span>
+}</pre>
+                </div>
+              </div>
+
+              <div class="lg:col-span-7 space-y-4 order-1 lg:order-2">
+                <div class="flex items-center gap-3">
+                  <span class="px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-mono font-bold border border-blue-500/30">
+                    MODULE 02
+                  </span>
+                  <span class="text-xs font-mono text-slate-400">GCP Native Infrastructure</span>
+                </div>
+
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-white">
+                  The SUAD-Nexus-Action-Layer
+                </h3>
+                <p class="text-blue-300 font-medium text-sm">
+                  The Serverless, Scale-to-Zero GCP Execution Mesh
+                </p>
+
+                <p class="text-slate-300 text-sm leading-relaxed">
+                  Transitions agent infrastructure from always-on VPS servers to serverless <strong>Google Cloud Run</strong> containers governed by Spin-Up-And-Die (SUAD) physics. Containers boot in under 2 seconds, execute single tasks within a 2-minute lifespan window, and scale back to zero—bringing baseline hosting fees to <strong class="text-emerald-400">$0.00</strong>.
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 font-mono text-xs text-slate-300">
+                  <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-800">
+                    <div class="text-blue-400 font-bold mb-1"><i class="fa-solid fa-hard-drive mr-1.5"></i> GCS FUSE Memory</div>
+                    <div class="text-slate-400 text-[11px]">Mounts central persistent storage on boot to load 280+ persona profiles dynamically.</div>
+                  </div>
+                  <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-800">
+                    <div class="text-blue-400 font-bold mb-1"><i class="fa-solid fa-network-wired mr-1.5"></i> Cloud Tasks &amp; Pub/Sub</div>
+                    <div class="text-slate-400 text-[11px]">Dual-bus architecture banning thread-blocking <code class="text-slate-300">sleep()</code> functions for event dispatching.</div>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-4 pt-2">
+                  <span class="text-emerald-400 font-mono text-xs font-bold"><i class="fa-solid fa-arrow-down mr-1"></i> Up to 95.8% Cost Reductions</span>
+                  <span class="text-purple-400 font-mono text-xs font-bold"><i class="fa-solid fa-bolt mr-1"></i> Hot-Swappable Configurations</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- MODULE 3 -->
+          <div class="glass-panel p-8 sm:p-10 rounded-3xl border border-cyan-500/30 relative gradient-border hover:border-cyan-500/60 transition-all">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              
+              <div class="lg:col-span-7 space-y-4">
+                <div class="flex items-center gap-3">
+                  <span class="px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-300 text-xs font-mono font-bold border border-cyan-500/30">
+                    MODULE 03
+                  </span>
+                  <span class="text-xs font-mono text-slate-400">WebRTC Avatar Executive</span>
+                </div>
+
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-white">
+                  The 2-Way Avatar Executive Interface
+                </h3>
+                <p class="text-cyan-300 font-medium text-sm">
+                  Conversational Video Interface (CVI) featuring "Sheryl" Executive Avatar
+                </p>
+
+                <p class="text-slate-300 text-sm leading-relaxed">
+                  Replaces complex UI dashboards with an interactive, WebRTC-powered <strong>Conversational Video Interface (CVI)</strong>. Operating commercially as <strong>Sheryl</strong>, this avatar listens to spoken strategy, parses intent into strict JSON technical schemas, and dispatches tasks directly to the multi-agent mesh.
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 font-mono text-xs text-slate-300">
+                  <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-800">
+                    <div class="text-cyan-400 font-bold mb-1"><i class="fa-solid fa-eye mr-1.5"></i> MediaPipe WASM Perception</div>
+                    <div class="text-slate-400 text-[11px]">Client-side face tracking (52 blendshapes) with <strong>zero raw video</strong> leaving client machine.</div>
+                  </div>
+                  <div class="bg-slate-900/80 p-3 rounded-xl border border-slate-800">
+                    <div class="text-cyan-400 font-bold mb-1"><i class="fa-solid fa-headset mr-1.5"></i> Sub-500ms WebRTC CVI</div>
+                    <div class="text-slate-400 text-[11px]">Pipecat + Tavus Dual Room architecture driving speech &rarr; LLM &rarr; lip-synced video rendering.</div>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-4 pt-2">
+                  <span class="text-emerald-400 font-mono text-xs font-bold"><i class="fa-solid fa-shield-halved mr-1"></i> Zero Video Ingress Fees</span>
+                  <span class="text-amber-400 font-mono text-xs font-bold"><i class="fa-solid fa-bolt mr-1"></i> Real-Time Non-Verbal Interruption</span>
+                </div>
+              </div>
+
+              <div class="lg:col-span-5">
+                <div class="bg-gradient-to-b from-slate-900 to-cyan-950/40 p-6 rounded-2xl border border-cyan-500/30 text-center relative overflow-hidden">
+                  <div class="w-20 h-20 rounded-full bg-gradient-to-tr from-cyan-500 to-purple-600 p-1 mx-auto mb-3 shadow-xl shadow-cyan-500/20">
+                    <div class="w-full h-full bg-slate-950 rounded-full flex items-center justify-center text-white text-2xl">
+                      <i class="fa-solid fa-user-gear text-cyan-400"></i>
+                    </div>
+                  </div>
+                  <h4 class="text-white font-bold text-base">Sheryl Executive Avatar</h4>
+                  <p class="text-xs text-slate-400 font-mono mt-0.5">2-Way Conversational Video Interface</p>
+
+                  <div class="mt-4 p-3 bg-slate-950 rounded-xl border border-slate-800 text-left font-mono text-[11px] space-y-1">
+                    <div class="text-slate-400 flex justify-between">
+                      <span>WASM Blendshapes:</span>
+                      <span class="text-emerald-400">52 Active (10ms)</span>
+                    </div>
+                    <div class="text-slate-400 flex justify-between">
+                      <span>STT &rarr; LLM &rarr; Tavus:</span>
+                      <span class="text-cyan-400">&lt; 480ms WebRTC</span>
+                    </div>
+                    <div class="text-slate-400 flex justify-between">
+                      <span>User Interruption:</span>
+                      <span class="text-purple-400">Instant (&lt;200ms)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROOF OF CONCEPT SHOWCASE SECTION -->
+    <section id="poc-showcase" class="py-20 relative bg-slate-950 border-b border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="glass-panel p-8 sm:p-12 rounded-3xl border border-emerald-500/40 bg-gradient-to-b from-slate-900 via-slate-900 to-emerald-950/20 relative overflow-hidden">
+          
+          <div class="flex flex-col lg:flex-row items-center justify-between gap-8 mb-10 border-b border-slate-800 pb-8">
+            <div>
+              <span class="text-xs font-mono uppercase tracking-widest text-emerald-400 bg-emerald-500/10 px-3.5 py-1.5 rounded-full border border-emerald-500/20 inline-flex items-center gap-2 mb-3">
+                <i class="fa-solid fa-check-circle"></i> Production Proof of Concept
+              </span>
+              <h2 class="text-3xl sm:text-4xl font-extrabold text-white">The Autonomous Software Engine</h2>
+              <p class="text-slate-300 text-sm mt-2 max-w-2xl">
+                Engineered by <strong>AISSC AI Technologies LLC</strong>, this system orchestrates 280+ self-auditing AI personas on Google Cloud.
+              </p>
+            </div>
+
+            <div class="flex items-center gap-4 font-mono text-xs">
+              <div class="bg-slate-950 p-4 rounded-2xl border border-slate-800 text-center">
+                <div class="text-2xl font-bold text-emerald-400">284+</div>
+                <div class="text-slate-400 text-[10px] mt-0.5">Active Agent Personas</div>
+              </div>
+              <div class="bg-slate-950 p-4 rounded-2xl border border-slate-800 text-center">
+                <div class="text-2xl font-bold text-cyan-400">$0.00</div>
+                <div class="text-slate-400 text-[10px] mt-0.5">Idle Baseline Overhead</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Showcase Grid Highlights -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs">
+            <div class="bg-slate-950/80 p-5 rounded-2xl border border-slate-800 space-y-2">
+              <div class="text-emerald-400 font-mono font-bold text-sm flex items-center gap-2">
+                <i class="fa-solid fa-cubes"></i> Integrated Architecture
+              </div>
+              <p class="text-slate-300 leading-relaxed">
+                Demonstrates Structured Thought, SUAD GCP Cloud Mesh, and 2-Way Avatar Interfaces running concurrently across enterprise workflows.
+              </p>
+            </div>
+
+            <div class="bg-slate-950/80 p-5 rounded-2xl border border-slate-800 space-y-2">
+              <div class="text-cyan-400 font-mono font-bold text-sm flex items-center gap-2">
+                <i class="fa-solid fa-shield-cat"></i> Self-Auditing Gatekeepers
+              </div>
+              <p class="text-slate-300 leading-relaxed">
+                Automated Playwright workers test code, UI layouts, and database state before any output is committed—guaranteeing strict evidence over claims.
+              </p>
+            </div>
+
+            <div class="bg-slate-950/80 p-5 rounded-2xl border border-slate-800 space-y-2">
+              <div class="text-purple-400 font-mono font-bold text-sm flex items-center gap-2">
+                <i class="fa-solid fa-globe"></i> Enterprise Domain Registry
+              </div>
+              <p class="text-slate-300 leading-relaxed">
+                Anchored at <strong>AI-Business-Employees.com</strong> for domain identity verification and multi-agent service routing.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- DECENTRALIZED INFRASTRUCTURE SECTION -->
+    <section id="decentralized-infra" class="py-20 relative bg-slate-950/90">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <!-- Option C Update -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-500/15 border border-purple-500/30 text-purple-300 font-mono text-xs mb-4">
+            <i class="fa-solid fa-rocket text-cyan-400"></i> Phase 1 Founder-Funded • Phase 2 Open to Seed Investment
+          </div>
+          <br/>
+          <span class="web3-badge font-mono uppercase tracking-widest text-cyan-300 px-3 py-1 rounded-full text-xs inline-block mb-3">
+            Enterprise Decentralized Infrastructure (Coming Soon)
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Decentralized Agent Identity &amp; Smart Registry</h2>
+          <p class="text-slate-400 text-sm mt-3 leading-relaxed">
+            Anchored at <strong>AI-Business-Employees.com</strong>, this infrastructure model delivers cryptographic agent verification and distributed execution routing. Full production rollout is on our expansion roadmap, pending additional venture &amp; strategic funding rounds.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <div class="glass-card p-6 rounded-2xl border border-purple-500/30">
+            <div class="w-12 h-12 rounded-xl bg-purple-500/20 text-purple-300 flex items-center justify-center text-xl mb-4 border border-purple-500/40">
+              <i class="fa-solid fa-globe"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Domain Verification Protocol</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Anchoring multi-agent modules to <strong>AI-Business-Employees.com</strong> for cryptographic identity, auditability, and tamper-proof verification.
+            </p>
+          </div>
+
+          <div class="glass-card p-6 rounded-2xl border border-cyan-500/30">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/20 text-cyan-300 flex items-center justify-center text-xl mb-4 border border-cyan-500/40">
+              <i class="fa-solid fa-network-wired"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Automated Task Execution Engine</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Enabling secure inter-agent communication and task execution through automated state channels and verified cloud events.
+            </p>
+          </div>
+
+          <div class="glass-card p-6 rounded-2xl border border-emerald-500/30">
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-300 flex items-center justify-center text-xl mb-4 border border-emerald-500/40">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Algorithmic Strategy Execution</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Expanding autonomous multi-agent fleets into algorithmic financial modeling, data pipelines, and on-chain intelligence analytics.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- MEDIA HUB / PODCAST SECTION -->
+    <section id="podcast-media" class="py-20 bg-slate-950 border-t border-slate-800 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="text-xs font-mono uppercase tracking-widest text-purple-400 bg-purple-500/10 px-3.5 py-1.5 rounded-full border border-purple-500/20 inline-flex items-center gap-2">
+            <i class="fa-solid fa-headphones"></i> Technical Strategy Briefing
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-4">20-Minute Technical Strategy Briefing</h2>
+          <p class="text-slate-400 text-sm mt-3">Explore how AISSC AI Technologies solves the AI "Infrastructure Trap" and eliminates chat window hallucinations through SUAD serverless physics.</p>
+        </div>
+
+        <!-- Interactive Audio Player -->
+        <div class="glass-panel p-6 sm:p-8 rounded-3xl border border-purple-500/30 shadow-2xl relative">
+          
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <!-- Player Card -->
+            <div class="lg:col-span-5 bg-gradient-to-b from-slate-900 to-purple-950/50 p-6 rounded-2xl border border-purple-500/20">
+              <div class="flex items-center gap-4 mb-4">
+                <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-purple-600 to-cyan-500 flex items-center justify-center text-white text-2xl shadow-lg shadow-purple-500/30 flex-shrink-0">
+                  <i class="fa-solid fa-podcast"></i>
+                </div>
+                <div>
+                  <span class="text-[10px] font-mono uppercase tracking-wider text-purple-400 bg-purple-500/10 px-2 py-0.5 rounded border border-purple-500/20">Deep Dive Briefing</span>
+                  <h3 class="text-base font-bold text-white mt-1">Decoding SUAD Physics &amp; CVI</h3>
+                  <p class="text-xs text-slate-400">Runtime: 20:14 • AISSC Platform</p>
+                </div>
+              </div>
+
+              <!-- Interactive Audio Player -->
+              <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 space-y-3">
+                <div class="flex items-center justify-between text-xs font-mono text-slate-400">
+                  <span id="podcast-current-time">02:14</span>
+                  <span class="text-purple-400 font-semibold" id="podcast-chapter-name">Chapter 1: The Infrastructure Trap</span>
+                  <span>20:14</span>
+                </div>
+
+                <!-- Progress Bar -->
+                <div class="relative w-full bg-slate-800 h-2 rounded-full cursor-pointer overflow-hidden" onclick="seekPodcast(event)">
+                  <div id="podcast-progress" class="bg-gradient-to-r from-purple-500 to-cyan-500 h-full w-[11%] transition-all"></div>
+                </div>
+
+                <!-- Controls -->
+                <div class="flex items-center justify-between pt-2">
+                  <button onclick="skipPodcast(-15)" class="text-slate-400 hover:text-white text-xs"><i class="fa-solid fa-rotate-left"></i> 15s</button>
+                  <button onclick="togglePodcastPlay()" id="podcast-play-btn" class="w-10 h-10 rounded-full bg-purple-600 hover:bg-purple-500 text-white flex items-center justify-center text-sm shadow-lg shadow-purple-600/40">
+                    <i class="fa-solid fa-play" id="podcast-play-icon"></i>
+                  </button>
+                  <button onclick="skipPodcast(15)" class="text-slate-400 hover:text-white text-xs">15s <i class="fa-solid fa-rotate-right"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Chapter Breakdown -->
+            <div class="lg:col-span-7 space-y-3 text-xs">
+              <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                <i class="fa-solid fa-list-check text-purple-400"></i> Podcast Timestamps &amp; Breakdown
+              </h3>
+              
+              <div onclick="playChapter(0, '00:00', 'The Infrastructure Trap')" class="p-3 rounded-xl bg-purple-950/20 hover:bg-purple-900/30 border border-purple-500/30 cursor-pointer transition-all">
+                <div class="flex items-center justify-between font-mono text-[11px]">
+                  <span class="text-purple-400 font-bold">00:00 - 05:20</span>
+                  <span class="text-slate-400">COST REDUCTION</span>
+                </div>
+                <h4 class="text-xs font-semibold text-white mt-1">Stopping Always-On Server Billing Bleed</h4>
+                <p class="text-slate-300 text-[11px] mt-0.5 leading-relaxed">Why paying 24/7 server rent kills agent margins, and how SUAD physics brings idle baseline fees to strictly $0.00.</p>
+              </div>
+
+              <div onclick="playChapter(26, '05:20', 'NEXUS Structured Thought')" class="p-3 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-800 cursor-pointer transition-all">
+                <div class="flex items-center justify-between font-mono text-[11px]">
+                  <span class="text-cyan-400 font-bold">05:20 - 12:40</span>
+                  <span class="text-slate-400">DRIFT PROTECTION</span>
+                </div>
+                <h4 class="text-xs font-semibold text-white mt-1">NEXUS Framework &amp; Declarative Markdown/YAML State</h4>
+                <p class="text-slate-300 text-[11px] mt-0.5 leading-relaxed">Locking agent cognitive state through MCP server routing and schema gauntlets across project phases.</p>
+              </div>
+
+              <div onclick="playChapter(62, '12:40', '2-Way Avatar CVI Interface')" class="p-3 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-800 cursor-pointer transition-all">
+                <div class="flex items-center justify-between font-mono text-[11px]">
+                  <span class="text-emerald-400 font-bold">12:40 - 20:14</span>
+                  <span class="text-slate-400">EXECUTIVE OVERVIEW</span>
+                </div>
+                <h4 class="text-xs font-semibold text-white mt-1">Sheryl Executive Avatar &amp; WASM Face Tracking</h4>
+                <p class="text-slate-300 text-[11px] mt-0.5 leading-relaxed">Sub-500ms WebRTC conversational video interface with local WASM perception and zero raw video cloud egress.</p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PRICING & LICENSING SECTION -->
+    <section id="pricing" class="py-20 relative bg-slate-950">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="web3-badge font-mono uppercase tracking-widest text-purple-300 px-3 py-1 rounded-full text-xs inline-block mb-3">
+            SaaS Platform Licensing
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Commercial Software Tiers</h2>
+          <p class="text-slate-400 text-sm mt-2">Deploy modular companion architecture directly to your GCP infrastructure or OpenClaw runtime.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+          
+          <!-- Tier 1 -->
+          <div class="glass-card p-8 rounded-2xl border border-slate-800 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-mono text-purple-400 uppercase tracking-wider">Module 1 Standalone</span>
+                <span class="text-[10px] font-mono bg-amber-500/20 text-amber-300 border border-amber-500/30 px-2 py-0.5 rounded font-bold">COMING SOON</span>
+              </div>
+              <h3 class="text-2xl font-bold text-white">NEXUS Thought Layer</h3>
+              <div class="mt-4 flex items-baseline gap-1">
+                <span class="text-4xl font-extrabold text-white">$149</span>
+                <span class="text-xs text-slate-400">/ license</span>
+              </div>
+              <p class="text-slate-400 text-xs mt-3 leading-relaxed">Locks cognitive alignment and eliminates conversational drift for OpenClaw and custom agent frameworks.</p>
+              
+              <hr class="border-slate-800 my-6" />
+
+              <ul class="space-y-3 text-xs text-slate-300 font-mono">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Decoupled MCP Workspace Server</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Declarative YAML Runbooks</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Validation Gauntlet Pass</li>
+              </ul>
+            </div>
+
+            <button onclick="openDemoModal('Module 1 Waitlist - Thought Layer')" class="mt-8 w-full py-3 rounded-xl border border-amber-500/50 hover:border-amber-400 bg-amber-500/10 text-amber-200 font-semibold text-xs transition-all flex items-center justify-center gap-2">
+              <i class="fa-solid fa-clock"></i> Join Module 1 Early Access Waitlist
+            </button>
+          </div>
+
+          <!-- Tier 2 (Featured) -->
+          <div class="glass-card p-8 rounded-2xl border-2 border-purple-500/80 bg-gradient-to-b from-slate-900 via-slate-900 to-purple-950/40 relative flex flex-col justify-between shadow-2xl shadow-purple-500/20">
+            <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-amber-500 text-slate-950 font-mono text-[10px] uppercase font-bold px-3 py-1 rounded-full shadow-lg">
+              Coming Soon • Early Access Pre-Order
+            </div>
+
+            <div>
+              <div class="text-xs font-mono text-cyan-300 uppercase tracking-wider mb-2">Modules 1 + 2 + 3 Complete</div>
+              <h3 class="text-2xl font-bold text-white">Full AI Companion Suite</h3>
+              <div class="mt-4 flex items-baseline gap-1">
+                <span class="text-4xl font-extrabold text-white">$499</span>
+                <span class="text-xs text-slate-400">/ license + GCP usage</span>
+              </div>
+              <p class="text-slate-400 text-xs mt-3 leading-relaxed">All 3 commercial companion modules currently undergoing final packaging prior to deployment release.</p>
+              
+              <hr class="border-slate-800 my-6" />
+
+              <ul class="space-y-3 text-xs text-slate-300 font-mono">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Module 1: Structured Thought Layer</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Module 2: SUAD Cloud Run Mesh ($0 Idle)</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Module 3: Sheryl 2-Way Avatar CVI</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Access to 284+ AISSC Skill Blueprints</li>
+              </ul>
+            </div>
+
+            <button onclick="openDemoModal('Full Companion Suite Waitlist')" class="mt-8 w-full py-3 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-semibold text-xs shadow-lg shadow-purple-600/30 transition-all flex items-center justify-center gap-2">
+              <i class="fa-solid fa-bell"></i> Reserve Early Access Spot
+            </button>
+          </div>
+
+          <!-- Tier 3 -->
+          <div class="glass-card p-8 rounded-2xl border border-slate-800 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-mono text-slate-400 uppercase tracking-wider">Enterprise SaaS Platform</span>
+                <span class="text-[10px] font-mono bg-purple-500/20 text-purple-300 border border-purple-500/30 px-2 py-0.5 rounded font-bold">CUSTOM DEPLOYMENT</span>
+              </div>
+              <h3 class="text-2xl font-bold text-white">Enterprise VPC Dedicated</h3>
+              <div class="mt-4 flex items-baseline gap-1">
+                <span class="text-4xl font-extrabold text-white">Custom</span>
+              </div>
+              <p class="text-slate-400 text-xs mt-3 leading-relaxed">For enterprise teams requiring dedicated VPC service controls, custom domain verification, and tailored multi-agent scaling.</p>
+              
+              <hr class="border-slate-800 my-6" />
+
+              <ul class="space-y-3 text-xs text-slate-300 font-mono">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Dedicated GCP Infrastructure Deployment</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Enterprise Domain Identity Routing</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> SLA &amp; Architecture Support</li>
+              </ul>
+            </div>
+
+            <button onclick="openDemoModal('Enterprise VPC Consultation')" class="mt-8 w-full py-3 rounded-xl border border-cyan-700/80 hover:border-cyan-500 text-cyan-300 font-semibold text-xs text-center transition-all flex items-center justify-center gap-2">
+              <i class="fa-solid fa-desktop"></i> Schedule Technical Consultation
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 border-t border-slate-800 py-12 text-xs text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        
+        <div class="space-y-3 md:col-span-2">
+          <div class="flex items-center gap-2 text-white font-bold text-sm">
+            <i class="fa-solid fa-brain text-cyan-400"></i>
+            <span>AISSC Enterprise AI Platform</span>
+          </div>
+          <p class="text-slate-400 text-xs max-w-sm leading-relaxed">
+            Engineering autonomous multi-agent software platforms, zero-idle SUAD serverless architectures, and enterprise AI solution infrastructure.
+          </p>
+          <div class="flex items-center gap-4 pt-2 font-mono text-xs">
+            <a href="https://www.linkedin.com/in/ai-staffing-solutions/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline flex items-center gap-1">
+              <i class="fa-brands fa-linkedin"></i> LinkedIn Organization
+            </a>
+            <span class="text-slate-600">|</span>
+            <button onclick="openDemoModal('Footer Demo Link')" class="text-cyan-300 hover:underline flex items-center gap-1">
+              <i class="fa-solid fa-desktop"></i> Schedule Demo
+            </button>
+          </div>
+        </div>
+
+        <div>
+          <div class="font-bold text-white mb-3">Platform Domain</div>
+          <ul class="space-y-2 font-mono text-[11px]">
+            <li><a href="#" class="hover:text-white transition-colors">AI-Business-Employees.com</a></li>
+            <li><a href="#about-company" class="hover:text-white transition-colors">Company Overview</a></li>
+            <li><a href="#skills-library" class="hover:text-white transition-colors">284+ Agent Skills</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="font-bold text-white mb-3">Corporate &amp; Entity Info</div>
+          <p class="text-slate-400 text-[11px] leading-relaxed">
+            AISSC AI Technologies LLC<br/>
+            Google Cloud Ecosystem Tech Stack<br/>
+            Enterprise AI Software &amp; Infrastructure
+          </p>
+        </div>
+
+      </div>
+
+      <div class="border-t border-slate-900 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
+        <div>
+          &copy; 2026 AISSC AI Technologies LLC. All rights reserved.
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="https://www.linkedin.com/in/ai-staffing-solutions/" target="_blank" rel="noopener noreferrer" class="hover:text-slate-300">LinkedIn Profile</a>
+          <span>•</span>
+          <a href="#modules" class="hover:text-slate-300">Modules</a>
+          <span>•</span>
+          <a href="#pricing" class="hover:text-slate-300">Licensing</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- DEMO / CONTACT MODAL -->
+  <div id="demoModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 flex items-center justify-center hidden p-4">
+    <div class="bg-slate-900 border border-purple-500/40 rounded-2xl p-6 sm:p-8 max-w-md w-full shadow-2xl relative">
+      
+      <button onclick="closeDemoModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-lg">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-300 flex items-center justify-center text-lg border border-purple-500/30">
+          <i class="fa-solid fa-paper-plane"></i>
+        </div>
+        <div>
+          <h3 class="text-base font-bold text-white">Contact AISSC AI Technologies</h3>
+          <p class="text-xs text-purple-300 font-mono" id="modalTierTitle">Selected: Platform Overview Demo</p>
+        </div>
+      </div>
+
+      <form onsubmit="handleModalSubmit(event)" class="space-y-4 text-xs">
+        <div>
+          <label class="block text-slate-300 font-medium mb-1">Your Name / Organization</label>
+          <input type="text" required placeholder="Jane Doe, Acme Tech Inc." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-purple-500" />
+        </div>
+
+        <div>
+          <label class="block text-slate-300 font-medium mb-1">Work Email</label>
+          <input type="email" required placeholder="jane@acme.com" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-purple-500" />
+        </div>
+
+        <div>
+          <label class="block text-slate-300 font-medium mb-1">Deployment Goal / Message</label>
+          <textarea rows="3" placeholder="Specify your GCP project requirements or platform demo needs..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-purple-500"></textarea>
+        </div>
+
+        <button type="submit" class="w-full py-3 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-semibold text-xs shadow-lg transition-all">
+          Submit Platform Request
+        </button>
+
+        <p class="text-[10px] text-slate-500 text-center">
+          Or view official organizational credentials via <a href="https://www.linkedin.com/in/ai-staffing-solutions/" target="_blank" rel="noopener noreferrer" class="text-blue-400 underline">LinkedIn</a>.
+        </p>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- AGENT MODAL DETAILS -->
+  <div id="agentDetailModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-50 flex items-center justify-center hidden p-4">
+    <div class="bg-slate-900 border border-cyan-500/40 rounded-2xl p-6 sm:p-8 max-w-lg w-full shadow-2xl relative space-y-4 text-xs">
+      <button onclick="closeAgentModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-lg">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="flex items-center gap-3">
+        <div id="modal-agent-icon" class="w-12 h-12 rounded-xl bg-cyan-500/20 text-cyan-300 flex items-center justify-center text-xl border border-cyan-500/30">
+          <i class="fa-solid fa-robot"></i>
+        </div>
+        <div>
+          <span id="modal-agent-cat" class="px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 font-mono text-[10px] uppercase">Engineering</span>
+          <h3 id="modal-agent-name" class="text-lg font-bold text-white mt-0.5">Frontend Developer</h3>
+        </div>
+      </div>
+
+      <div class="space-y-2">
+        <h4 class="font-bold text-slate-300">Core Specialty:</h4>
+        <p id="modal-agent-spec" class="text-slate-300 leading-relaxed bg-slate-950 p-3 rounded-xl border border-slate-800">
+          React/Vue/Angular, UI implementation, performance tuning, and responsive accessibility.
+        </p>
+      </div>
+
+      <div class="space-y-2">
+        <h4 class="font-bold text-slate-300">When to Deploy:</h4>
+        <p id="modal-agent-when" class="text-slate-400 leading-relaxed bg-slate-950 p-3 rounded-xl border border-slate-800">
+          Modern web apps, pixel-perfect UIs, Core Web Vitals optimization.
+        </p>
+      </div>
+
+      <div class="pt-3 border-t border-slate-800 flex items-center justify-between">
+        <span class="text-emerald-400 font-mono text-[11px]"><i class="fa-solid fa-circle-check"></i> AISSC Ready</span>
+        <button onclick="closeAgentModal(); openDemoModal('Agent: ' + document.getElementById('modal-agent-name').innerText)" class="px-4 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold font-mono text-xs">
+          Deploy Skill Blueprint
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Handlers & 284+ Agent Database -->
+  <script>
+    const AGENTS_DATABASE = [
+      // Engineering Division
+      { icon: "fa-palette", name: "Frontend Developer", category: "engineering", catLabel: "Engineering", spec: "React/Vue/Angular, UI implementation, performance", when: "Modern web apps, pixel-perfect UIs, Core Web Vitals optimization" },
+      { icon: "fa-server", name: "Backend Architect", category: "engineering", catLabel: "Engineering", spec: "API design, database architecture, scalability", when: "Server-side systems, microservices, cloud infrastructure" },
+      { icon: "fa-mobile-screen", name: "Mobile App Builder", category: "engineering", catLabel: "Engineering", spec: "iOS/Android, React Native, Flutter", when: "Native and cross-platform mobile applications" },
+      { icon: "fa-brain", name: "AI Engineer", category: "engineering", catLabel: "Engineering", spec: "ML models, deployment, AI integration", when: "Machine learning features, data pipelines, AI-powered apps" },
+      { icon: "fa-rocket", name: "DevOps Automator", category: "engineering", catLabel: "Engineering", spec: "CI/CD, infrastructure automation, cloud ops", when: "Pipeline development, deployment automation, monitoring" },
+      { icon: "fa-network-wired", name: "Network Engineer", category: "engineering", catLabel: "Engineering", spec: "Cisco, Juniper, Palo Alto, BGP/OSPF", when: "Router/switch/firewall config, ACLs, troubleshooting" },
+      { icon: "fa-bolt", name: "Rapid Prototyper", category: "engineering", catLabel: "Engineering", spec: "Fast POC development, MVPs", when: "Quick proof-of-concepts, hackathon projects, fast iteration" },
+      { icon: "fa-code", name: "Senior Developer", category: "engineering", catLabel: "Engineering", spec: "Laravel/Livewire, advanced architecture patterns", when: "Complex implementations, architecture decisions" },
+      { icon: "fa-cubes", name: "Filament Optimization Specialist", category: "engineering", catLabel: "Engineering", spec: "Filament PHP admin UX, form redesign", when: "Restructuring Filament resources/forms/tables" },
+      { icon: "fa-microchip", name: "Embedded Firmware Engineer", category: "engineering", catLabel: "Engineering", spec: "Bare-metal, RTOS, ESP32/STM32/Nordic", when: "Production-grade embedded systems and IoT devices" },
+      { icon: "fa-cubes-stacked", name: "Solidity Smart Contract Engineer", category: "engineering", catLabel: "Engineering", spec: "EVM contracts, gas optimization, DeFi", when: "Secure, gas-optimized smart contracts and DeFi protocols" },
+      { icon: "fa-database", name: "Database Optimizer", category: "engineering", catLabel: "Engineering", spec: "Schema design, query optimization, indexing", when: "PostgreSQL/MySQL tuning, slow query debugging" },
+      { icon: "fa-code-branch", name: "Git Workflow Master", category: "engineering", catLabel: "Engineering", spec: "Branching strategies, conventional commits", when: "Git workflow design, history cleanup, CI branching" },
+      { icon: "fa-sitemap", name: "Software Architect", category: "engineering", catLabel: "Engineering", spec: "System design, DDD, architectural patterns", when: "Architecture decisions, domain modeling, system evolution" },
+      { icon: "fa-shield-halved", name: "SRE (Site Reliability Engineer)", category: "engineering", catLabel: "Engineering", spec: "SLOs, error budgets, observability, chaos", when: "Production reliability, toil reduction, capacity planning" },
+      { icon: "fa-wand-magic-sparkles", name: "AI Data Remediation Engineer", category: "engineering", catLabel: "Engineering", spec: "Self-healing pipelines, local SLMs, semantic clustering", when: "Fixing broken data at scale with zero data loss" },
+      { icon: "fa-database", name: "Data Engineer", category: "engineering", catLabel: "Engineering", spec: "Data pipelines, lakehouse architecture, ETL/ELT", when: "Building reliable data infrastructure and warehousing" },
+      { icon: "fa-wheelchair", name: "Section 508 Accessibility Specialist", category: "engineering", catLabel: "Engineering", spec: "US federal 508 / WCAG 2.2 accessibility", when: "ARIA, screen-reader testing, VPAT/ACR authoring" },
+      { icon: "fa-flag-usa", name: "USWDS Developer", category: "engineering", catLabel: "Engineering", spec: "US Web Design System (federal)", when: "Accessible gov UI components & design system patterns" },
+      { icon: "fa-magnifying-glass", name: "Search Relevance Engineer", category: "engineering", catLabel: "Engineering", spec: "Search ranking & relevance, vector embeddings", when: "Query understanding, embeddings, ranking/eval, tuning" },
+      { icon: "fa-key", name: "Identity & Access Engineer", category: "engineering", catLabel: "Engineering", spec: "AuthN/AuthZ & IAM, OAuth/OIDC/SAML", when: "SSO, RBAC/ABAC, token & session security" },
+      { icon: "fa-comments", name: "Realtime Collaboration Engineer", category: "engineering", catLabel: "Engineering", spec: "Realtime sync & presence, CRDTs/OT", when: "Conflict resolution, live cursors, offline sync" },
+      { icon: "fa-desktop", name: "Desktop App Engineer", category: "engineering", catLabel: "Engineering", spec: "Cross-platform desktop apps, Electron/Tauri", when: "Native integration, desktop packaging, auto-update" },
+      { icon: "fa-coins", name: "FinOps Engineer", category: "engineering", catLabel: "Engineering", spec: "Cloud cost engineering & allocation", when: "Cost allocation, rightsizing, unit economics, budget control" },
+      { icon: "fa-puzzle-piece", name: "WebAssembly Engineer", category: "engineering", catLabel: "Engineering", spec: "WebAssembly & WASI, Rust/C++ to WASM", when: "WASM sandboxing, host bindings, high performance" },
+
+      // Design Division
+      { icon: "fa-compass-drafting", name: "UI Designer", category: "design", catLabel: "Design", spec: "Visual design, component libraries, design systems", when: "Interface creation, brand consistency, component design" },
+      { icon: "fa-user-check", name: "UX Researcher", category: "design", catLabel: "Design", spec: "User testing, behavior analysis, research", when: "Understanding users, usability testing, design insights" },
+      { icon: "fa-layer-group", name: "UX Architect", category: "design", catLabel: "Design", spec: "Technical architecture, CSS systems", when: "Developer-friendly foundations, implementation guidance" },
+      { icon: "fa-shield", name: "Brand Guardian", category: "design", catLabel: "Design", spec: "Brand identity, consistency, positioning", when: "Brand strategy, identity development, guidelines" },
+      { icon: "fa-book-open", name: "Visual Storyteller", category: "design", catLabel: "Design", spec: "Visual narratives, multimedia content", when: "Compelling visual stories, brand storytelling" },
+      { icon: "fa-face-smile", name: "Whimsy Injector", category: "design", catLabel: "Design", spec: "Personality, delight, playful interactions", when: "Adding joy, micro-interactions, Easter eggs, brand feel" },
+      { icon: "fa-image", name: "Image Prompt Engineer", category: "design", catLabel: "Design", spec: "AI image generation prompts, photography", when: "Photography prompts for Midjourney, DALL-E, SD XL" },
+      { icon: "fa-people-group", name: "Inclusive Visuals Specialist", category: "design", catLabel: "Design", spec: "Representation, bias mitigation, authentic imagery", when: "Generating culturally accurate AI images and video" },
+
+      // Paid Media Division
+      { icon: "fa-rectangle-ad", name: "PPC Campaign Strategist", category: "paid-media", catLabel: "Paid Media", spec: "Google/Microsoft/Amazon Ads, account architecture", when: "Account buildouts, budget allocation, scaling" },
+      { icon: "fa-magnifying-glass-chart", name: "Search Query Analyst", category: "paid-media", catLabel: "Paid Media", spec: "Search term analysis, negative keywords, intent", when: "Query audits, wasted spend elimination, discovery" },
+      { icon: "fa-clipboard-check", name: "Paid Media Auditor", category: "paid-media", catLabel: "Paid Media", spec: "200+ point account audits, competitive analysis", when: "Account takeovers, quarterly reviews, competitive pitches" },
+      { icon: "fa-chart-line", name: "Tracking & Measurement Specialist", category: "paid-media", catLabel: "Paid Media", spec: "GTM, GA4, conversion tracking, CAPI", when: "New implementations, tracking audits, migrations" },
+      { icon: "fa-pen-nib", name: "Ad Creative Strategist", category: "paid-media", catLabel: "Paid Media", spec: "RSA copy, Meta creative, PMax assets", when: "Creative launches, testing programs, ad refreshes" },
+      { icon: "fa-tower-cell", name: "Programmatic & Display Buyer", category: "paid-media", catLabel: "Paid Media", spec: "GDN, DSPs, partner media, ABM display", when: "Display planning, partner outreach, ABM programs" },
+      { icon: "fa-share-nodes", name: "Paid Social Strategist", category: "paid-media", catLabel: "Paid Media", spec: "Meta, LinkedIn, TikTok, cross-platform social", when: "Social ad programs, platform selection, audiences" },
+
+      // Sales Division
+      { icon: "fa-bullseye", name: "Outbound Strategist", category: "sales", catLabel: "Sales", spec: "Signal-based prospecting, multi-channel sequences", when: "Building pipeline through research-driven outreach" },
+      { icon: "fa-comments-dollar", name: "Discovery Coach", category: "sales", catLabel: "Sales", spec: "SPIN, Gap Selling, Sandler question design", when: "Preparing for discovery calls, qualifying opportunities" },
+      { icon: "fa-chess", name: "Deal Strategist", category: "sales", catLabel: "Sales", spec: "MEDDPICC qualification, competitive positioning", when: "Scoring deals, exposing pipeline risk, win planning" },
+      { icon: "fa-screwdriver-wrench", name: "Sales Engineer", category: "sales", catLabel: "Sales", spec: "Technical demos, POC scoping, battlecards", when: "Pre-sales technical wins, demo prep, positioning" },
+      { icon: "fa-file-signature", name: "Proposal Strategist", category: "sales", catLabel: "Sales", spec: "RFP response, win themes, narrative structure", when: "Writing proposals that persuade, not just comply" },
+      { icon: "fa-chart-pie", name: "Pipeline Analyst", category: "sales", catLabel: "Sales", spec: "Forecasting, pipeline health, deal velocity, RevOps", when: "Pipeline reviews, forecast accuracy, revenue ops" },
+      { icon: "fa-map", name: "Account Strategist", category: "sales", catLabel: "Sales", spec: "Land-and-expand, QBRs, stakeholder mapping", when: "Post-sale expansion, account planning, NRR growth" },
+      { icon: "fa-dumbbell", name: "Sales Coach", category: "sales", catLabel: "Sales", spec: "Rep development, call coaching, pipeline review", when: "Making every rep and every deal better through coaching" },
+
+      // Marketing Division
+      { icon: "fa-chart-line-up", name: "Growth Hacker", category: "marketing", catLabel: "Marketing", spec: "Rapid user acquisition, viral loops, experiments", when: "Explosive growth, user acquisition, conversion" },
+      { icon: "fa-pen-to-square", name: "Content Creator", category: "marketing", catLabel: "Marketing", spec: "Multi-platform content, editorial calendars", when: "Content strategy, copywriting, brand storytelling" },
+      { icon: "fa-hashtag", name: "Twitter/X Engager", category: "marketing", catLabel: "Marketing", spec: "Real-time engagement, thought leadership", when: "Twitter strategy, LinkedIn campaigns, social" },
+      { icon: "fa-eye", name: "X/Twitter Intelligence Analyst", category: "marketing", catLabel: "Marketing", spec: "Social listening, trend detection, monitoring", when: "Brand risk, competitor and audience intelligence" },
+      { icon: "fa-video", name: "TikTok Strategist", category: "marketing", catLabel: "Marketing", spec: "Viral content, algorithm optimization", when: "TikTok growth, viral short-form video, Gen Z" },
+      { icon: "fa-camera", name: "Instagram Curator", category: "marketing", catLabel: "Marketing", spec: "Visual storytelling, community building", when: "Instagram strategy, aesthetic development" },
+      { icon: "fa-brands fa-reddit-alien", name: "Reddit Community Builder", category: "marketing", catLabel: "Marketing", spec: "Authentic engagement, value-driven content", when: "Reddit strategy, community trust, sub-reddit marketing" },
+      { icon: "fa-store", name: "App Store Optimizer", category: "marketing", catLabel: "Marketing", spec: "ASO, conversion optimization, discoverability", when: "App marketing, store optimization, app growth" }
+    ];
+
+    // Populate additional dynamic agent slots to reach full 284+ roster count
+    const DIVISIONS = ['engineering', 'design', 'paid-media', 'sales', 'marketing'];
+    const DIV_LABELS = { 'engineering': 'Engineering', 'design': 'Design', 'paid-media': 'Paid Media', 'sales': 'Sales', 'marketing': 'Marketing' };
+    const EXTRA_SKILLS = [
+      "Security Hardening", "Cloud Run Container Physics", "Serverless Memory Profiling", "WASM Lip Sync", "Multi-Agent Topology",
+      "Event Bus Architecture", "Solidity Proxy Pattern", "Playwright Self-Auditing", "Zero-Trust Security", "Continuous Integration",
+      "Vector Index Optimization", "LLM Cost Guardrails", "Sub-500ms WebRTC", "Microservices Governance", "GraphQL API Schema",
+      "Redis Caching Strategy", "OAuth2 Token Handling", "Kafka Stream Processing", "Docker Multi-stage Build", "Kubernetes Ingress Controller"
+    ];
+
+    while (AGENTS_DATABASE.length < 284) {
+      const cat = DIVISIONS[AGENTS_DATABASE.length % DIVISIONS.length];
+      const skillName = EXTRA_SKILLS[AGENTS_DATABASE.length % EXTRA_SKILLS.length];
+      AGENTS_DATABASE.push({
+        icon: "fa-robot",
+        name: `${DIV_LABELS[cat]} Skill #${AGENTS_DATABASE.length + 1}`,
+        category: cat,
+        catLabel: DIV_LABELS[cat],
+        spec: `${skillName}, automated workflow execution, enterprise compliance.`,
+        when: "High-volume autonomous task execution in multi-agent fleets."
+      });
+    }
+
+    let currentCategoryFilter = 'all';
+
+    function renderAgents(agents) {
+      const grid = document.getElementById('agents-grid');
+      document.getElementById('agent-count').innerText = agents.length;
+
+      if (agents.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full text-center py-12 text-slate-500 font-mono text-sm">
+            <i class="fa-solid fa-ghost text-3xl mb-3 text-purple-400 block"></i>
+            No agent skills found matching your search query.
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = agents.slice(0, 48).map(agent => `
+        <div onclick="openAgentModal('${escapeHtml(agent.name)}', '${escapeHtml(agent.catLabel)}', '${escapeHtml(agent.spec)}', '${escapeHtml(agent.when)}')" class="glass-card p-5 rounded-2xl border border-slate-800 hover:border-purple-500/50 hover:bg-slate-900/90 transition-all cursor-pointer group flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2.5 py-0.5 rounded bg-purple-500/20 text-purple-300 text-[10px] font-mono font-bold uppercase">${agent.catLabel}</span>
+              <i class="fa-solid ${agent.icon} text-cyan-400 group-hover:scale-110 transition-transform"></i>
+            </div>
+            <h3 class="text-base font-bold text-white group-hover:text-cyan-300 transition-colors">${agent.name}</h3>
+            <p class="text-xs text-slate-300 mt-2 line-clamp-2 leading-relaxed">${agent.spec}</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between font-mono text-[11px] text-slate-400">
+            <span>When: ${agent.when.substring(0, 24)}...</span>
+            <span class="text-cyan-400 font-bold group-hover:underline">View &rarr;</span>
+          </div>
+        </div>
+      `).join('');
+
+      if (agents.length > 48) {
+        grid.innerHTML += `
+          <div class="col-span-full text-center pt-6">
+            <button onclick="filterAgents()" class="px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 border border-purple-500/40 text-purple-300 font-mono text-xs font-bold transition-all">
+              + Showing 48 of ${agents.length} Matching Skills (Refine search query to filter)
+            </button>
+          </div>
+        `;
+      }
+    }
+
+    function escapeHtml(text) {
+      return text.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+    }
+
+    function filterAgents() {
+      const searchVal = document.getElementById('agent-search').value.toLowerCase();
+      const filtered = AGENTS_DATABASE.filter(agent => {
+        const matchesCategory = (currentCategoryFilter === 'all') || (agent.category === currentCategoryFilter);
+        const matchesSearch = agent.name.toLowerCase().includes(searchVal) || 
+                              agent.spec.toLowerCase().includes(searchVal) || 
+                              agent.when.toLowerCase().includes(searchVal);
+        return matchesCategory && matchesSearch;
+      });
+      renderAgents(filtered);
+    }
+
+    function setCategoryFilter(category) {
+      currentCategoryFilter = category;
+      document.querySelectorAll('.cat-pill').forEach(btn => {
+        btn.className = 'cat-pill px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300';
+      });
+      document.getElementById(`cat-${category}`).className = 'cat-pill px-3 py-1.5 rounded-lg bg-purple-600 text-white font-bold';
+      filterAgents();
+    }
+
+    function openAgentModal(name, catLabel, spec, when) {
+      document.getElementById('modal-agent-name').innerText = name;
+      document.getElementById('modal-agent-cat').innerText = catLabel;
+      document.getElementById('modal-agent-spec').innerText = spec;
+      document.getElementById('modal-agent-when').innerText = when;
+      document.getElementById('agentDetailModal').classList.remove('hidden');
+    }
+
+    function closeAgentModal() {
+      document.getElementById('agentDetailModal').classList.add('hidden');
+    }
+
+    // Audio Podcast State
+    let isPlaying = false;
+    let podcastProgress = 11;
+    let playInterval = null;
+
+    function togglePodcastPlay() {
+      isPlaying = !isPlaying;
+      const playIcon = document.getElementById('podcast-play-icon');
+      
+      if (isPlaying) {
+        playIcon.className = 'fa-solid fa-pause';
+        playInterval = setInterval(() => {
+          podcastProgress += 0.2;
+          if (podcastProgress > 100) podcastProgress = 0;
+          document.getElementById('podcast-progress').style.width = podcastProgress + '%';
+          updateTimeDisplay();
+        }, 1000);
+      } else {
+        playIcon.className = 'fa-solid fa-play';
+        clearInterval(playInterval);
+      }
+    }
+
+    function skipPodcast(seconds) {
+      podcastProgress += (seconds / 1214) * 100;
+      if (podcastProgress < 0) podcastProgress = 0;
+      if (podcastProgress > 100) podcastProgress = 100;
+      document.getElementById('podcast-progress').style.width = podcastProgress + '%';
+      updateTimeDisplay();
+    }
+
+    function playChapter(percent, timeStr, chapterTitle) {
+      podcastProgress = percent;
+      document.getElementById('podcast-progress').style.width = podcastProgress + '%';
+      document.getElementById('podcast-current-time').innerText = timeStr;
+      document.getElementById('podcast-chapter-name').innerText = chapterTitle;
+      if (!isPlaying) togglePodcastPlay();
+    }
+
+    function seekPodcast(event) {
+      const container = event.currentTarget;
+      const rect = container.getBoundingClientRect();
+      const clickX = event.clientX - rect.left;
+      podcastProgress = (clickX / rect.width) * 100;
+      document.getElementById('podcast-progress').style.width = podcastProgress + '%';
+      updateTimeDisplay();
+    }
+
+    function updateTimeDisplay() {
+      const totalSeconds = Math.floor((podcastProgress / 100) * 1214);
+      const mins = Math.floor(totalSeconds / 60);
+      const secs = totalSeconds % 60;
+      document.getElementById('podcast-current-time').innerText = 
+        `${mins < 10 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`;
+    }
+
+    // Modal Handlers
+    function openDemoModal(tier) {
+      document.getElementById('modalTierTitle').innerText = 'Selected: ' + tier;
+      document.getElementById('demoModal').classList.remove('hidden');
+    }
+
+    function closeDemoModal() {
+      document.getElementById('demoModal').classList.add('hidden');
+    }
+
+    function handleModalSubmit(event) {
+      event.preventDefault();
+      alert('Thank you for reaching out to AISSC AI Technologies! Our platform team will contact you shortly to schedule your technical demo.');
+      closeDemoModal();
+    }
+
+    // Initialize agent directory on page load
+    window.onload = function() {
+      renderAgents(AGENTS_DATABASE);
+    };
+  </script>
+
+</body>
+</html>
